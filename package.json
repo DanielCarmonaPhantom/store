@@ -2,7 +2,7 @@
   "name": "store",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
@@ -18,5 +18,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.6.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
   }
 }

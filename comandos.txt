@@ -1,0 +1,27 @@
+--------- SQL ------------
+
+sudo mysql
+
+
+SHOW databases;
+
+CREATE database restaurante;
+
+USE restaurante;
+
+CREATE TABLE sucursal(
+    razonSocial VARCHAR(50),
+    rfc CHAR(13) UNIQUE NOT NULL,
+    nombre VARCHAR(50), 
+    ubicacion VARCHAR(80) NOT NULL,
+    PRIMARY KEY(razonSocial)   
+);
+
+SHOW tables;
+
+
+DESC sucursal;
+
+INSERT INTO sucursal VALUES("Chi la queria S.A de C.V.", "QYUHJSHDJKIUY", "Chi la queria", "CDMX");
+
+SELECT * FROM sucursal 

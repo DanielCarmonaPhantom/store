@@ -33,25 +33,18 @@ router.post('/', (req, res)=>{
 })
 
 // Metodo para actualizar el producto
-
 router.patch('/:id', (req, res)=>{
     const { id } = req.params;
     const body = req.body;
-
-    res.json({
-        message: 'update',
-        data: body,
-        id
-    })
+    const product = service.update(id, body)    
+    res.status(200).json(product)
 })
 
 router.delete('/:id', (req, res)=>{
     const { id } = req.params;
-
-    res.json({
-        message: 'Deleted',
-        id
-    })
+    const rta = service.delete(id)
+    res.status(200).json(rta)
+    
 })
 
 module.exports = router;

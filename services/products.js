@@ -45,25 +45,26 @@ class ProductsService{
         const index = this.products.findIndex(item => item.id === id);
         if (index === -1) {
             throw new Error('product not found')
-        }else{
-            this.products[index] = changes;
-            return this.products[index];
-        }        
+        }
+        const product = this.products[index];
+        this.products[index] = {
+            ...product,
+            ...changes
+        }
+        return this.products[index];       
     }
 
     delete(id){
         const index = this.products.findIndex(item => item.id === id);
         if (index === -1) {
             throw new Error('product not found')
-        }else{
-            this.products.splice(index,1);
-            return {
-                message: true,
-                id
-            }
-        }    
+        }
+        this.products.splice(index,1);
+        return {
+            message: true,
+            id
+        }           
     }
-
 }
 
 module.exports = ProductsService;

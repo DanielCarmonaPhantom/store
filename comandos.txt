@@ -25,3 +25,8 @@ DESC sucursal;
 INSERT INTO sucursal VALUES("Chi la queria S.A de C.V.", "QYUHJSHDJKIUY", "Chi la queria", "CDMX");
 
 SELECT * FROM sucursal 
+
+
+-------------- JOI  --------------
+
+Joi se utiliza para la validación de datos entrantes

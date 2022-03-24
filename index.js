@@ -20,7 +20,7 @@ const options ={
     }
 }
 
-app.use(cors())
+app.use(cors(options))
 app.use(express.json());
 
 app.get('/', (req, res)=>{
@@ -40,7 +40,7 @@ app.use(errorHandler);
 
 
 app.listen(port, ()=>{
-    console.log("Ejecutandose en localhost:" + port);
+    console.log("Ejecutandose en looptions calhost:" + port);
 })
 
 

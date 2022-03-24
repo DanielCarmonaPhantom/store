@@ -1,11 +1,13 @@
 const express = require('express');
 const routerApi = require('./routes')
+const cors = require('cors')
 
-// const { logErrors, errorHandler } = require('./middlewares/error.handler')
+const { logErrors, errorHandler , boomErrorHandler} = require('./middlewares/error.handler')
 
 const app = express();
 const port = 3000;
 
+app.use(cors())
 app.use(express.json());
 
 // app.get('/', (req, res)=>{
@@ -18,12 +20,14 @@ app.use(express.json());
 
 routerApi(app);
 
-// app.use(logErrors);
-// app.use(errorHandler);
+app.use(logErrors);
+app.use(boomErrorHandler)
+app.use(errorHandler);
+
 
 
 app.listen(port, ()=>{
-    console.log("Mi port " + port);
+    console.log("Ejecutandose en localhost:" + port);
 })
 
 

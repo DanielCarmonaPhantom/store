@@ -40,7 +40,7 @@ app.use(errorHandler);
 
 
 app.listen(port, ()=>{
-    console.log("Ejecutandose en looptions calhost:" + port);
+    console.log("Ejecutandose en loocalhost:" + port);
 })
 
 

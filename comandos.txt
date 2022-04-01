@@ -30,3 +30,9 @@ SELECT * FROM sucursal
 -------------- JOI  --------------
 
 Joi se utiliza para la validación de datos entrantes
+
+-------------- PostgreSQL --------------
+
+npm install pg
+
+npm install dotenv

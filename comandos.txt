@@ -36,3 +36,8 @@ Joi se utiliza para la validación de datos entrantes
 npm install pg
 
 npm install dotenv
+
+
+-------------- Sequelize --------------
+npm i --save sequelize
+npm install --save pg pg-hstore
